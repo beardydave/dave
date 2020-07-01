@@ -41,7 +41,8 @@ body {
 }
 
 .header,
-.main {
+.main,
+.second {
   height: 90vh;
   width: 100wv;
   position: relative;
@@ -78,6 +79,11 @@ body {
 .skill-text {
   font-size: 32px;
   font-weight: 600;
+}
+
+.second {
+  background-color: #4b646a;
+  color: #eee;
 }
 
 @media (min-width: 1000px) {
