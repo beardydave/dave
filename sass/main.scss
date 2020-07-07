@@ -1,21 +1,28 @@
+@import "variables";
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: #eee;
+  background-color: $light-grey;
   font-family: "Roboto", sans-serif;
-  padding: 20px;
+  padding: 2rem;
 }
 
 .container {
   position: absolute;
-  top: 20px;
-  left: 150px;
-  right: 20px;
-  height: 110px;
+  top: 2rem;
+  left: 15rem;
+  right: 2rem;
+  height: 11rem;
   display: flex;
   align-items: center;
   // background-color: red;
@@ -23,97 +30,73 @@ body {
 
 .logo {
   position: fixed;
-  top: 40px;
-  left: 40px;
-  width: 110px;
-  background-color: #eee;
-  border: 2px solid #4b646a;
-  border-radius: 10px;
+  top: 4rem;
+  left: 4rem;
+  width: 11rem;
+  border: 3px solid $primary-color;
+  border-radius: 1rem;
+  background-color: $light-grey;
   z-index: 1000;
-}
-.logo-hover {
-  background-color: #4b646a;
+  transition: opacity .2s;
 }
 
 .subtitle {
-  font-size: 20px;
+  font-size: 2rem;
   z-index: 100;
 }
 
 .header,
 .main,
 .second {
-  height: 90vh;
+  min-height: 90vh;
   width: 100wv;
   position: relative;
   overflow: hidden;
 }
 .header {
-  background-color: #4b646a;
-  color: #eee;
-  border-radius: 10px 10px 0 0;
+  background-color: $primary-color;
+  color: $light-grey;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .main {
-  background-color: #eee;
-  color: #4b646a;
-  margin-left: 150px;
-  padding: 50px 0;
+  background-color: $light-grey;
+  color: $primary-color;
+  padding: 5rem 0;
 }
-
-.title-skills {
-  font-size: 40px;
-}
-
-.skill-container {
-  margin-top: 30px;
-  width: 80%;
-  height: 300px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  align-items: center;
-}
-.skill-text {
-  font-size: 32px;
-  font-weight: 600;
-}
-
 .second {
-  background-color: #4b646a;
-  color: #eee;
+  background-color: $primary-color;
+  color: $light-grey;
 }
+
+@import "skills";
 
 @media (min-width: 1000px) {
   .logo {
-    width: 150px;
+    width: 15rem;
   }
   .container {
-    left: 200px;
-    height: 150px;
+    left: 20rem;
+    height: 15rem;
   }
   .subtitle {
-    font-size: 28px;
+    font-size: 2.8rem;
   }
 
   .main {
-    margin-left: 200px;
+    margin-left: 20rem;
   }
 }
 
 @media (max-width: 350px) {
   .logo {
-    width: 100px;
+    width: 10rem;
   }
   .container {
-    left: 130px;
-    height: 100px;
+    left: 13rem;
+    height: 10rem;
   }
   .subtitle {
-    font-size: 18px;
-  }
-
-  .main {
-    margin-left: 200px;
+    font-size: 1.8rem;
   }
 }
